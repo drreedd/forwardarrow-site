@@ -6,15 +6,15 @@ export default function ForwardArrowSite() {
   const services = [
     {
       title: "AI Primer & Readiness",
-      text: "Practical first steps for churches, nonprofits, and small businesses that want clarity before they invest time or money."
+      text: "Practical first steps for churches, nonprofits, small businesses, and professional teams that want clarity before investing time or money."
     },
     {
       title: "Human-First AI Guidance",
-      text: "Adoption support built around judgment, safety, and real-world usefulness—not hype."
+      text: "Support built around judgment, safety, accountability, and real-world usefulness—not hype."
     },
     {
       title: "Workflow Implementation",
-      text: "Help identifying where AI can reduce repetitive work, improve communication, and support lean teams."
+      text: "Help identifying where AI can reduce repetitive work, improve communication, and fit into day-to-day operations."
     }
   ];
 
@@ -29,8 +29,35 @@ export default function ForwardArrowSite() {
   const principles = [
     "Technology should serve people.",
     "AI should reduce burden—not increase confusion.",
-    "Adoption should be intentional, ethical, and grounded.",
+    "Use should be intentional, ethical, and grounded.",
     "Competence, it turns out, still matters."
+  ];
+
+  const resources = [
+    {
+      title: "AI Primer",
+      text: "A simple, safe starting point for understanding how AI can be used in real workflows.",
+      href: "/Forward_Arrow_AI_Primer_v4.pdf",
+      cta: "Open the Primer"
+    },
+    {
+      title: "AI Use Case Checklist",
+      text: "Define a real use case before choosing tools—avoid wasted time, confusion, and unnecessary risk.",
+      href: "/Forward_Arrow_AI_Checklist_v3.pdf",
+      cta: "Open the Checklist"
+    },
+    {
+      title: "Clinic AI Checklist",
+      text: "A practical guide for medical practices navigating workflow, compliance, and patient data risks.",
+      href: "/Forward_Arrow_Clinic_AI_Checklist_v6_content_fixed.pdf",
+      cta: "Open the Clinic Checklist"
+    },
+    {
+      title: "Church AI Starter",
+      text: "Simple, human-first guidance for churches exploring AI without losing mission, discernment, or trust.",
+      href: "/AI_Church_OnePager_v5.pdf",
+      cta: "Open the Church Guide"
+    }
   ];
 
   const handleSubmit = async (e) => {
@@ -73,6 +100,9 @@ export default function ForwardArrowSite() {
             <a href="#primer" className="hover:text-teal-700">
               AI Primer
             </a>
+            <a href="#resources" className="hover:text-teal-700">
+              Resources
+            </a>
             <a href="#philosophy" className="hover:text-teal-700">
               Philosophy
             </a>
@@ -93,11 +123,12 @@ export default function ForwardArrowSite() {
               </div>
 
               <h1 className="mt-6 text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
-                Clear, grounded AI guidance for church teams, nonprofits, and small businesses.
+                Clear, grounded guidance for using AI in real workflows.
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-slate-700 max-w-2xl">
-                Forward Arrow helps organizations start small, stay safe, and get measurable value from AI without losing judgment, trust, or mission focus.
+                Forward Arrow helps organizations think clearly about where AI fits,
+                what it should be doing, and where the right boundaries need to be.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -108,12 +139,10 @@ export default function ForwardArrowSite() {
                   Start the conversation
                 </a>
                 <a
-                  href="/Forward_Arrow_AI_Primer_v4.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-2xl bg-teal-700 px-6 py-3 text-white font-medium shadow hover:bg-teal-800 transition"
+                  href="#resources"
+                  className="rounded-2xl border border-teal-700 px-6 py-3 text-teal-700 font-medium shadow-sm hover:bg-teal-50 transition"
                 >
-                  View the primer
+                  Explore resources
                 </a>
               </div>
             </div>
@@ -124,7 +153,9 @@ export default function ForwardArrowSite() {
                   Why this matters now
                 </div>
                 <p className="mt-3 text-slate-700 leading-7">
-                  Artificial Intelligence is already reshaping how organizations operate, but many are stuck between hype, uncertainty, and fear of doing it wrong.
+                  Most organizations do not need more hype around AI. They need
+                  practical clarity around where it helps, where it creates risk,
+                  and how to use it responsibly in the work they are already doing.
                 </p>
               </div>
 
@@ -143,10 +174,11 @@ export default function ForwardArrowSite() {
               Services
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight">
-              Practical help for organizations that want to use AI well.
+              Practical help for organizations trying to make sense of AI.
             </h2>
             <p className="mt-4 text-slate-700 text-lg leading-8">
-              Forward Arrow focuses on grounded, useful support that helps organizations move forward with clarity instead of confusion.
+              Forward Arrow focuses on grounded, useful support that helps teams
+              move forward with clarity instead of confusion.
             </p>
           </div>
 
@@ -175,7 +207,8 @@ export default function ForwardArrowSite() {
                 Start with clarity before you make bigger investments.
               </h2>
               <p className="mt-4 text-slate-700 text-lg leading-8">
-                The Forward Arrow primer is built for organizations that want a responsible, useful first step into AI adoption.
+                The Forward Arrow primer is built for organizations that want a
+                responsible, useful first step into AI.
               </p>
 
               <a
@@ -204,6 +237,42 @@ export default function ForwardArrowSite() {
           </div>
         </section>
 
+        <section id="resources" className="max-w-6xl mx-auto px-6 py-20 scroll-mt-24">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
+              Resources
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight">
+              Practical tools to help you get clarity before you commit.
+            </h2>
+            <p className="mt-4 text-slate-700 text-lg leading-8">
+              These are built for real conversations with organizations trying to
+              work out how AI fits into existing workflows, responsibilities, and
+              boundaries.
+            </p>
+          </div>
+
+          <div className="mt-10 grid md:grid-cols-2 gap-6">
+            {resources.map((resource) => (
+              <a
+                key={resource.title}
+                href={resource.href}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm hover:border-teal-400 hover:shadow-md transition"
+              >
+                <h3 className="text-xl font-semibold text-slate-900">
+                  {resource.title}
+                </h3>
+                <p className="mt-3 text-slate-700 leading-7">{resource.text}</p>
+                <div className="mt-5 text-sm font-medium text-teal-700">
+                  {resource.cta} →
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section id="philosophy" className="max-w-6xl mx-auto px-6 py-20 scroll-mt-24">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">
@@ -213,7 +282,9 @@ export default function ForwardArrowSite() {
               Human-first, practical, and grounded.
             </h2>
             <p className="mt-4 text-slate-700 text-lg leading-8">
-              Forward Arrow is built on the belief that technology should help people work better, decide more clearly, and remain in control of what matters most.
+              Forward Arrow is built on the belief that technology should help
+              people work better, think more clearly, and stay in control of what
+              matters most.
             </p>
           </div>
 
@@ -240,14 +311,19 @@ export default function ForwardArrowSite() {
                   Take the next step forward—with clarity.
                 </h2>
                 <p className="mt-4 text-slate-700 text-lg leading-8">
-                  Forward Arrow Services, LLC helps organizations adopt AI in a way that is useful, responsible, and grounded in human judgment.
+                  Forward Arrow Services, LLC helps organizations use AI in a way
+                  that is useful, responsible, and grounded in human judgment.
                 </p>
               </div>
 
               <div className="rounded-3xl bg-white border border-slate-200 p-6 shadow-sm">
                 {!submitted ? (
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <input type="hidden" name="_subject" value="Forward Arrow Inquiry" />
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="Forward Arrow Inquiry"
+                    />
 
                     <input
                       type="text"
@@ -280,7 +356,7 @@ export default function ForwardArrowSite() {
 
                     <button
                       type="submit"
-                      className="w-full rounded-2xl bg-teal-700 px-6 py-3 text-white font-medium shadow hover:bg-teal-800"
+                      className="w-full rounded-2xl bg-teal-700 px-6 py-3 text-white font-medium shadow hover:bg-teal-800 transition"
                     >
                       Send Message
                     </button>
@@ -291,7 +367,9 @@ export default function ForwardArrowSite() {
                       Thank you.
                     </div>
                     <p className="mt-4 text-slate-700 leading-7">
-                      Your message has been received. Forward Arrow will be following up with you personally within 24 - 48 hours. Until then, check out the primer{" "}
+                      Your message has been received. Forward Arrow will be
+                      following up with you personally within 24 - 48 hours.
+                      Until then, check out the primer{" "}
                       <a
                         href="/Forward_Arrow_AI_Primer_v4.pdf"
                         target="_blank"
