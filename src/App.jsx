@@ -7,7 +7,7 @@ export default function ForwardArrowSite() {
   const [showOffer, setShowOffer] = useState(false);
 
   // Replace this with your live Square checkout/payment link.
-  const SQUARE_CHECKOUT_URL = "https://square.link/u/REPLACE_WITH_YOUR_LINK";
+  const SQUARE_CHECKOUT_URL = "https://square.link/u/vO2cGa8T";
 
   const freeKitItems = [
     "AI Readiness Quick-Start Guide",
